@@ -4,6 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 import CourseCard from "@/components/CourseCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import TeamCard from "@/components/TeamCard";
+import FAQ from "@/components/FAQ";
 
 import { services } from "@/data/services";
 import { courses } from "@/data/courses";
@@ -265,6 +266,8 @@ A confident new look created by EHBA professionals.
 
 </section>
 
+  <FAQ />
+  
 <section className="cta">
 
 <h2>
