@@ -216,13 +216,36 @@ a {
 }
 
 
+/*   CTA  */
+
 .cta {
 
-  padding:70px;
+padding:100px 60px;
 
-  text-align:center;
+text-align:center;
 
-  background:#f7f3ef;
+background:
+var(--ehba-light);
+
+}
+
+
+
+.cta h2 {
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.cta p {
+
+font-size:20px;
+
+margin-bottom:35px;
 
 }
 
