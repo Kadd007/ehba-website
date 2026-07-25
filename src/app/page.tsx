@@ -207,7 +207,46 @@ key={item.name}
 
 </section>
 
+<section className="section showcase">
 
+<h2>
+Beauty Transformations
+</h2>
+
+
+<div className="transformation-grid">
+
+
+<div className="card">
+
+<h3>
+Before
+</h3>
+
+<p>
+Consultation and personalised beauty planning.
+</p>
+
+</div>
+
+
+
+<div className="card">
+
+<h3>
+After
+</h3>
+
+<p>
+A confident new look created by EHBA professionals.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
 
 <section className="cta">
 
