@@ -4,9 +4,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "EHBA | Elly's Hair And Beauty Academy",
-  description:
-    "Professional beauty services, salon bookings, and beauty academy courses."
+
+title:
+"EHBA | Elly's Hair And Beauty Academy & Salon",
+
+description:
+"Professional hair and beauty services, salon appointments, and beauty training courses from Elly's Hair And Beauty Academy.",
+
+keywords:[
+"hair salon",
+"beauty academy",
+"beauty courses",
+"hair styling",
+"beauty training"
+]
+
 };
 
 export default function RootLayout({
