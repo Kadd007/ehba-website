@@ -1,125 +1,229 @@
 import Link from "next/link";
-import { services } from "@/data/services";
+
 import ServiceCard from "@/components/ServiceCard";
-import { courses } from "@/data/courses";
 import CourseCard from "@/components/CourseCard";
+import TestimonialCard from "@/components/TestimonialCard";
+import TeamCard from "@/components/TeamCard";
+
+import { services } from "@/data/services";
+import { courses } from "@/data/courses";
+import { testimonials } from "@/data/testimonials";
+import { team } from "@/data/team";
 
 
-export default function Home() {
+export default function Home(){
 
-  return (
+return (
 
-    <>
+<>
 
-      {/* Hero */}
+<section className="hero">
 
-      <section className="hero">
+<div className="hero-content">
 
-        <div className="hero-content">
+<h1>
+Elly's Hair And Beauty Academy
+</h1>
 
-          <h1>
-            Beauty. Confidence. Education.
-          </h1>
+<p>
+Professional beauty services,
+training, and transformation.
+</p>
 
-          <p>
-            Welcome to Elly's Hair And Beauty Academy —
-            where professional salon services meet
-            beauty education.
-          </p>
+<div className="hero-buttons">
 
+<Link href="/booking">
+Book Appointment
+</Link>
 
-          <div className="hero-buttons">
+<Link href="/courses">
+Start Learning
+</Link>
 
-            <Link href="/booking">
-              Book Appointment
-            </Link>
+</div>
 
-            <Link href="/courses">
-              Join Academy
-            </Link>
+</div>
 
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      {/* Services */}
-
-      <section className="section">
-
-        <h2>
-          Our Services
-        </h2>
-
-        <div className="grid">
-
-          {services.slice(0,3).map(service => (
-
-            <ServiceCard
-              key={service.name}
-              {...service}
-            />
-
-          ))}
-
-        </div>
-
-      </section>
+</section>
 
 
 
-      {/* Academy */}
+<section className="section">
 
-      <section className="section">
-
-        <h2>
-          EHBA Academy
-        </h2>
-
-        <p>
-          Learn professional beauty skills
-          and build your future career.
-        </p>
+<h2>
+Why Choose EHBA?
+</h2>
 
 
-        <div className="grid">
+<div className="grid">
 
-          {courses.slice(0,3).map(course => (
+<div className="card">
 
-            <CourseCard
-              key={course.title}
-              {...course}
-            />
+<h3>
+Professional Services
+</h3>
 
-          ))}
+<p>
+Quality beauty treatments delivered
+with care and expertise.
+</p>
 
-        </div>
-
-      </section>
-
-
-
-      {/* CTA */}
-
-      <section className="cta">
-
-        <h2>
-          Ready for your beauty transformation?
-        </h2>
+</div>
 
 
-        <Link href="/booking">
-          Schedule Your Visit
-        </Link>
+<div className="card">
 
-      </section>
+<h3>
+Beauty Education
+</h3>
+
+<p>
+Learn practical skills from experienced
+beauty professionals.
+</p>
+
+</div>
 
 
-    </>
+<div className="card">
 
-  );
+<h3>
+Personal Experience
+</h3>
+
+<p>
+A welcoming environment designed
+around every client.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section className="section">
+
+<h2>
+Featured Services
+</h2>
+
+<div className="grid">
+
+{
+services.slice(0,3).map(service=>(
+
+<ServiceCard
+key={service.name}
+{...service}
+
+/>
+
+))
+}
+
+</div>
+
+</section>
+
+
+
+<section className="section">
+
+<h2>
+Academy Programs
+</h2>
+
+
+<div className="grid">
+
+{
+courses.map(course=>(
+
+<CourseCard
+key={course.title}
+{...course}
+/>
+
+))
+}
+
+</div>
+
+</section>
+
+
+
+<section className="section">
+
+<h2>
+Meet Our Team
+</h2>
+
+
+<div className="grid">
+
+{
+team.map(member=>(
+
+<TeamCard
+key={member.name}
+{...member}
+/>
+
+))
+}
+
+</div>
+
+
+</section>
+
+
+
+<section className="section">
+
+<h2>
+What Our Clients Say
+</h2>
+
+
+<div className="grid">
+
+{
+testimonials.map(item=>(
+
+<TestimonialCard
+key={item.name}
+{...item}
+/>
+
+))
+}
+
+</div>
+
+</section>
+
+
+
+<section className="cta">
+
+<h2>
+Ready to experience EHBA?
+</h2>
+
+<Link href="/booking">
+Book Your Appointment
+</Link>
+
+</section>
+
+
+</>
+
+);
 
 }
