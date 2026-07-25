@@ -104,7 +104,7 @@ a {
 
   align-items:center;
 
-  padding:60px;
+  padding:80px;
 
   background:
   linear-gradient(
@@ -133,9 +133,13 @@ a {
 
 .hero h1 {
 
-  font-size:60px;
-
   margin-bottom:20px;
+
+  font-size:70px;
+
+max-width:800px;
+
+line-height:1.1;
 
 }
 
@@ -143,7 +147,10 @@ a {
 
 .hero p {
 
+
   font-size:22px;
+
+max-width:650px;
 
 }
 
