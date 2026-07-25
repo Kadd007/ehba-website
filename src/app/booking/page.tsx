@@ -1,46 +1,126 @@
+"use client";
+
+import { useState } from "react";
+
+
 export default function BookingPage(){
 
-  return (
-    <section className="page">
+const [message,setMessage] = useState("");
 
-      <h1>
-        Book Your Appointment
-      </h1>
 
-      <form>
+async function submitBooking(
+e:React.FormEvent<HTMLFormElement>
+){
 
-        <input
-          placeholder="Your Name"
-        />
+e.preventDefault();
 
-        <input
-          placeholder="Email"
-        />
 
-        <input
-          placeholder="Phone Number"
-        />
+const form =
+new FormData(e.currentTarget);
 
-        <select>
-          <option>
-            Hair Styling
-          </option>
 
-          <option>
-            Braiding
-          </option>
+await fetch(
+"/api/bookings",
+{
+method:"POST",
+body:JSON.stringify({
 
-          <option>
-            Makeup
-          </option>
-        </select>
+name:
+form.get("name"),
 
-        <button>
-          Request Booking
-        </button>
+email:
+form.get("email"),
 
-      </form>
+phone:
+form.get("phone"),
 
-    </section>
-  );
+service:
+form.get("service"),
+
+date:
+form.get("date")
+
+})
+
+});
+
+
+setMessage(
+"Booking request submitted!"
+);
+
+}
+
+
+return (
+
+<section className="page">
+
+
+<h1>
+Book Your Appointment
+</h1>
+
+
+<form onSubmit={submitBooking}>
+
+
+<input
+name="name"
+placeholder="Your Name"
+/>
+
+
+<input
+name="email"
+placeholder="Email"
+/>
+
+
+<input
+name="phone"
+placeholder="Phone Number"
+/>
+
+
+<select name="service">
+
+<option>
+Hair Styling
+</option>
+
+<option>
+Braiding
+</option>
+
+<option>
+Makeup
+</option>
+
+</select>
+
+
+<input
+name="date"
+type="date"
+/>
+
+
+<button>
+Submit Booking
+</button>
+
+
+</form>
+
+
+<p>
+{message}
+</p>
+
+
+</section>
+
+);
+
 }
