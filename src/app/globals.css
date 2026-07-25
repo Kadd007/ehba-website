@@ -203,7 +203,76 @@ body {
 
 }
 
+.section-title {
 
+margin-bottom:40px;
+
+}
+
+
+.section-title h2 {
+
+font-size:42px;
+
+}
+
+
+
+.image-card {
+
+overflow:hidden;
+
+border-radius:15px;
+
+background:white;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+.image-card img {
+
+width:100%;
+
+height:280px;
+
+object-fit:cover;
+
+}
+
+
+
+.image-card div {
+
+padding:20px;
+
+}
+
+
+
+.showcase {
+
+background:#faf7f2;
+
+}
+
+
+
+.transformation-grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(250px,1fr)
+);
+
+gap:30px;
+
+}
 
 @media(max-width:768px){
 
