@@ -393,3 +393,78 @@ justify-content:center;
 }
 
 }
+
+.mobile-menu {
+
+display:none;
+
+}
+
+
+
+.menu-button {
+
+font-size:30px;
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+
+.mobile-links {
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+position:absolute;
+
+right:20px;
+
+top:80px;
+
+padding:30px;
+
+background:white;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.15);
+
+border-radius:15px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.links {
+
+display:none;
+
+}
+
+
+.mobile-menu {
+
+display:block;
+
+}
+
+
+.navbar {
+
+padding:20px 30px;
+
+}
+
+
+}
