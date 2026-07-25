@@ -1,6 +1,3 @@
-# ehba-website
-Elly Hair And Beauty Academy website
-
 # EHBA Website
 
 ## Elly's Hair And Beauty Academy + Salon
