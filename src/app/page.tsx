@@ -21,31 +21,48 @@ return (
 
 <div className="hero-content">
 
+<p>
+ELLY'S HAIR AND BEAUTY ACADEMY
+</p>
+
+
 <h1>
-Elly's Hair And Beauty Academy
+Where Beauty Meets Confidence
 </h1>
 
+
 <p>
-Professional beauty services,
-training, and transformation.
+Premium salon services and professional beauty education.
 </p>
+
 
 <div className="hero-buttons">
 
-<Link href="/booking">
-Book Appointment
+
+<Link
+href="/booking"
+className="button"
+>
+Book Your Experience
 </Link>
 
-<Link href="/courses">
-Start Learning
+
+
+<Link
+href="/courses"
+className="button"
+>
+Explore Academy
 </Link>
+
 
 </div>
 
+
 </div>
+
 
 </section>
-
 
 
 <section className="section">
