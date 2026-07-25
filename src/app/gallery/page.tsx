@@ -1,44 +1,46 @@
-const images = [
-  "Salon Experience",
-  "Hair Styling",
-  "Beauty Training",
-  "Student Work"
-];
+import ImageCard from "@/components/ImageCard";
+import SectionTitle from "@/components/SectionTitle";
+import { gallery } from "@/data/gallery";
 
 
-export default function GalleryPage() {
+export default function GalleryPage(){
 
-  return (
+return (
 
-    <section className="page">
-
-      <h1>
-        EHBA Gallery
-      </h1>
+<section className="page">
 
 
-      <div className="grid">
+<SectionTitle
 
-        {images.map((image)=>(
-          <div 
-            className="card"
-            key={image}
-          >
+title="EHBA Gallery"
 
-            <h2>
-              {image}
-            </h2>
+subtitle="A showcase of our salon work, students, and beauty transformations."
 
-            <p>
-              Image showcase coming soon.
-            </p>
+/>
 
-          </div>
-        ))}
 
-      </div>
+<div className="grid">
 
-    </section>
+{
+gallery.map(item=>(
 
-  );
+<ImageCard
+
+key={item.title}
+
+{...item}
+
+/>
+
+))
+
+}
+
+</div>
+
+
+</section>
+
+);
+
 }
