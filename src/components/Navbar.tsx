@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar(){
 
@@ -49,7 +49,7 @@ Book Now
 
 
 </div>
-
+<MobileMenu />
 
 </nav>
 
