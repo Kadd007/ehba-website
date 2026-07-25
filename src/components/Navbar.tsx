@@ -7,9 +7,10 @@ return (
 
 <nav className="navbar">
 
-<div className="logo">
+
+<Link href="/" className="logo">
 EHBA
-</div>
+</Link>
 
 
 <div className="links">
@@ -23,10 +24,10 @@ About
 </Link>
 
 <Link href="/services">
-Services
+Salon
 </Link>
 
-<Link href="/academy">
+<Link href="/courses">
 Academy
 </Link>
 
@@ -38,12 +39,17 @@ Gallery
 Contact
 </Link>
 
-<Link href="/booking">
+
+<Link
+href="/booking"
+className="button"
+>
 Book Now
 </Link>
 
 
 </div>
+
 
 </nav>
 
